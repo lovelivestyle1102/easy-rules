@@ -40,14 +40,16 @@ import java.util.List;
 public abstract class AbstractRulesEngine implements RulesEngine {
 
     RulesEngineParameters parameters;
+
     List<RuleListener> ruleListeners;
+
     List<RulesEngineListener> rulesEngineListeners;
 
     AbstractRulesEngine() {
         this(new RulesEngineParameters());
     }
 
-    AbstractRulesEngine(final RulesEngineParameters parameters) {
+    protected AbstractRulesEngine(final RulesEngineParameters parameters) {
         this.parameters = parameters;
         this.ruleListeners = new ArrayList<>();
         this.rulesEngineListeners = new ArrayList<>();

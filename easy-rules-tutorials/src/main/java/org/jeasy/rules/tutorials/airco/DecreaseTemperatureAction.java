@@ -35,7 +35,12 @@ public class DecreaseTemperatureAction implements Action {
     @Override
     public void execute(Facts facts) {
         System.out.println("It is hot! cooling air..");
-        Integer temperature = facts.get("temperature");
-        facts.put("temperature", temperature - 1);
+//        Integer temperature = facts.get("temperature");
+//        facts.put("temperature", temperature - 1);
+        System.out.println((String)facts.get("key1"));
+
+        Consumer consumer = (Consumer) facts.get("consumer");
+
+        consumer.accept(facts);
     }
 }

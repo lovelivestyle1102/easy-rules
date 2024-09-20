@@ -38,10 +38,13 @@ import java.util.List;
 public class RuleBuilder {
 
     private String name = Rule.DEFAULT_NAME;
+
     private String description = Rule.DEFAULT_DESCRIPTION;
+
     private int priority = Rule.DEFAULT_PRIORITY;
 
     private Condition condition = Condition.FALSE;
+
     private final List<Action> actions = new ArrayList<>();
 
     /**

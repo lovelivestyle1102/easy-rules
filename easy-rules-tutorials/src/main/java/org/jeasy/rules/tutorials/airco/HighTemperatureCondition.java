@@ -35,6 +35,9 @@ public class HighTemperatureCondition implements Condition {
     @Override
     public boolean evaluate(Facts facts) {
         Integer temperature = facts.get("temperature");
+
+        facts.put("key1","val1");
+
         return temperature > 25;
     }
 

@@ -32,6 +32,7 @@ import java.util.List;
 class DefaultRule extends BasicRule {
 
     private final Condition condition;
+
     private final List<Action> actions;
 
     DefaultRule(String name, String description, int priority, Condition condition, List<Action> actions) {
